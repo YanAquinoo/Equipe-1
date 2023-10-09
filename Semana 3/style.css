@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "Space Grotesk";
+    src: url("https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap");
+}
+
+body {
+    font-family: "Space Grotesk", sans-serif;
+    background-color: hsl(0, 0%, 100%);
+}
+
+#background_pattern {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
