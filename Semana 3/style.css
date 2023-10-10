@@ -1,15 +1,19 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box/;
     font-family: "Space Grotesk", sans-serif;
-    font-size: ;
-    font-size: 18pxx;
+    font-weight: 500;
+    font-size: 0.8vw;
 }
 
 body {
     font-family: "Space Grotesk", sans-serif;
     background-color: hsl(0, 0%, 100%);
+}
+
+div,section {
+//   border: 1px solid #000;
 }
 
 #background_pattern {
@@ -21,57 +25,140 @@ body {
     z-index: -1;
 }
 
-div, section {
-    border: 1px solid #000;
-}
-
-
-
 #card_page {
     display: flex;
     margin-left: 10vw;
     margin-right: 10vw;
     margin-top: 15vh;
-    
-}
+    letter-spacing: 0.2vw;
 
+}
 
 #card_front {
     display: flex;
-    /* justify-content: center; */
     margin-bottom: 4vh;
 }
+label{
+    font-size: 0.6vw;
+    font-weight: 900;
+}
 
-#card_front_content{
+#card_front_content {
     position: absolute;
-    
+    color: hsl(0, 0%, 100%);
+
+    padding-left: 2vw;
+    padding-top: 2.5vh;
+    padding-bottom: 1.5vh;
+
 }
 
 #card_main_number {
+    font-size: 1.5vw;
 
+    padding-top: 6vh;
+    padding-bottom: 3vh;
+}
+
+#card_name {
+    text-transform: uppercase;
+}
+
+#cardholder_and_number {
+    display: grid;
+    margin-bottom: -10vh;
 }
 
 #card_name_and_expiration {
     display: flex;
     justify-content: space-between;
+    font-size: 0.5vw;
 }
 
+#card_back {
+    margin-left: 4.4vw;
+    display: grid;
+    align-items: center;
+    justify-items: right;
 
-#card_back  {
-    margin-left: 4vw;
+}
+
+#card_back_content {
+    position: absolute;
+    color: hsl(0, 0%, 100%);;
+}
+
+#card_cvc {
+    padding-right: 2.5vw;
+    margin-bottom: 0.25vw;
 }
 
 #Thank_you_page {
     display: none;
 }
 
-#main_text_container{
+#main_text_container {
     display: grid;
+    justify-items: center;
+    
+    color: hsl(278, 68%, 11%);
+    text-transform: uppercase;
+    letter-spacing: 0.14vw;
 
+    padding-top: 3vh;
+    margin-top: 5vh;
+    margin-left: 5vw;
 }
 
-#exp_cvc{
-    display: flex;
+#main_text_container 
+
+#cardholder_and_number {
+    display: grid;
+    margin-bottom: 1.5vh;
+    width: 23vw;
 }
 
-#ard_frob 
+#ch_name {
+    margin-bottom: 2vh;
+}
+
+#card_number {
+    margin-bottom: 2vh;
+}
+
+#exp_cvc {
+    margin-bottom: 2vh;
+}
+
+input {
+    height: 5vh;
+    border-radius: 8px;
+    border-color: hsl(278, 68%, 11%);
+    border-width: 0.1vw;
+    width: 23vw;
+}
+
+#Ch_name {
+    width: 23vw;
+}
+
+#exp_month,
+#exp_year {
+    width: 5vw;
+}
+
+#cvc{
+    width: 11.5vw;
+    margin-left: 0.5vw;
+}
+
+#confirm_button {
+    width: 23vw;
+    height: 3vw;  margin: 10vw;
+    background-color: hsl(278, 68%, 11%);
+    color: hsl(0, 0%, 100%);
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 5vh;
+}
