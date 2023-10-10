@@ -12,17 +12,22 @@ body {
     background-color: hsl(0, 0%, 100%);
 }
 
-div,section {
-//   border: 1px solid #000;
+div,
+section {
+    border: 1px solid #000;
 }
+
+
 
 #background_pattern {
     position: fixed;
+    z-index: -1;
     top: 0;
     left: 0;
-    height: 100%;
+
     background-repeat: no-repeat;
-    z-index: -1;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 #card_page {
@@ -34,11 +39,14 @@ div,section {
 
 }
 
+#cards {}
+
 #card_front {
     display: flex;
     margin-bottom: 4vh;
 }
-label{
+
+label {
     font-size: 0.6vw;
     font-weight: 900;
 }
@@ -76,7 +84,7 @@ label{
 }
 
 #card_back {
-    margin-left: 4.4vw;
+    margin-left: 6vw;
     display: grid;
     align-items: center;
     justify-items: right;
@@ -85,10 +93,11 @@ label{
 
 #card_back_content {
     position: absolute;
-    color: hsl(0, 0%, 100%);;
+    color: hsl(0, 0%, 100%);
+    ;
 }
 
-#card_cvc {
+#card_back_cvc {
     padding-right: 2.5vw;
     margin-bottom: 0.25vw;
 }
@@ -100,34 +109,45 @@ label{
 #main_text_container {
     display: grid;
     justify-items: center;
-    
+    border-color: aqua;
+
     color: hsl(278, 68%, 11%);
     text-transform: uppercase;
     letter-spacing: 0.14vw;
 
-    padding-top: 3vh;
-    margin-top: 5vh;
-    margin-left: 5vw;
+    padding-top: 10vh;
 }
 
-#main_text_container 
+.card_input {
+    width: 25vw;
+}
+
+.number_input {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+ch_name::placeholder {
+    padding-left: 10vw;
+}
+
 
 #cardholder_and_number {
     display: grid;
     margin-bottom: 1.5vh;
-    width: 23vw;
 }
 
-#ch_name {
-    margin-bottom: 2vh;
+#cardholder_and_number input {
+    width: 25vw;
 }
 
-#card_number {
-    margin-bottom: 2vh;
+#cardholder {
+    margin-bottom: 1.5vh;
 }
 
-#exp_cvc {
-    margin-bottom: 2vh;
+#exp_cvc_input {
+    display: flex;
+    justify-content: space-between;
 }
 
 input {
@@ -135,26 +155,24 @@ input {
     border-radius: 8px;
     border-color: hsl(278, 68%, 11%);
     border-width: 0.1vw;
-    width: 23vw;
 }
 
-#Ch_name {
-    width: 23vw;
-}
+#Ch_name {}
 
 #exp_month,
 #exp_year {
     width: 5vw;
 }
 
-#cvc{
+#cvc {
     width: 11.5vw;
     margin-left: 0.5vw;
 }
 
 #confirm_button {
     width: 23vw;
-    height: 3vw;  margin: 10vw;
+    height: 3vw;
+    margin: 10vw;
     background-color: hsl(278, 68%, 11%);
     color: hsl(0, 0%, 100%);
     border: none;
