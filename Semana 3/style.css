@@ -1,6 +1,10 @@
-@font-face {
-    font-family: "Space Grotesk";
-    src: url("https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: ;
+    font-size: 18pxx;
 }
 
 body {
@@ -17,3 +21,57 @@ body {
     z-index: -1;
 }
 
+div, section {
+    border: 1px solid #000;
+}
+
+
+
+#card_page {
+    display: flex;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 15vh;
+    
+}
+
+
+#card_front {
+    display: flex;
+    /* justify-content: center; */
+    margin-bottom: 4vh;
+}
+
+#card_front_content{
+    position: absolute;
+    
+}
+
+#card_main_number {
+
+}
+
+#card_name_and_expiration {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#card_back  {
+    margin-left: 4vw;
+}
+
+#Thank_you_page {
+    display: none;
+}
+
+#main_text_container{
+    display: grid;
+
+}
+
+#exp_cvc{
+    display: flex;
+}
+
+#ard_frob 
