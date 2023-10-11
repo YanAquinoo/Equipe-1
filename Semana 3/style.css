@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box/;
+    box-sizing: border-box;
     font-family: "Space Grotesk", sans-serif;
     font-weight: 500;
     font-size: 0.8vw;
@@ -12,20 +12,16 @@ body {
     background-color: hsl(0, 0%, 100%);
 }
 
-div,
+/* div,
 section {
     border: 1px solid #000;
-}
-
-
+} */
 
 #background_pattern {
     position: fixed;
     z-index: -1;
     top: 0;
     left: 0;
-
-    background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
@@ -39,7 +35,7 @@ section {
 
 }
 
-#cards {}
+/* #cards {} */
 
 #card_front {
     display: flex;
@@ -54,11 +50,15 @@ label {
 #card_front_content {
     position: absolute;
     color: hsl(0, 0%, 100%);
+    width: 27vw;
 
     padding-left: 2vw;
-    padding-top: 2.5vh;
+    padding-top: 3.5vh;
     padding-bottom: 1.5vh;
+}
 
+#card_text {
+    padding-top: 4vh;
 }
 
 #card_main_number {
@@ -69,6 +69,9 @@ label {
 }
 
 #card_name {
+    text-transform: uppercase;
+}
+#main_text_container label {
     text-transform: uppercase;
 }
 
@@ -98,28 +101,60 @@ label {
 }
 
 #card_back_cvc {
-    padding-right: 2.5vw;
+    padding-right: 3.5vw;
     margin-bottom: 0.25vw;
 }
 
+
 #Thank_you_page {
     display: none;
+    margin-top: 15vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#Thank_you_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2vw;
+    line-height: 1.7vw;
+}
+
+#thank_you {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: hsl(278, 68%, 11%);
+
+    font-size: large;
+
+}
+
+#text_details {
+    align-items: center;
+    justify-content: center;
+    color: hsl(279, 6%, 55%);
+    letter-spacing: 0vw;
+    padding-top: 2vh;
 }
 
 #main_text_container {
     display: grid;
     justify-items: center;
-    border-color: aqua;
 
     color: hsl(278, 68%, 11%);
-    text-transform: uppercase;
-    letter-spacing: 0.14vw;
+    letter-spacing: 0.2vw;
 
     padding-top: 10vh;
 }
 
 .card_input {
-    width: 25vw;
+    width: 20vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+
 }
 
 .number_input {
@@ -127,10 +162,20 @@ label {
     appearance: textfield;
 }
 
-ch_name::placeholder {
-    padding-left: 10vw;
+#ch_name, #number, #exp_month, #exp_year, #cvc {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight:800;
+    font-size: 0.8vw;
+    color: hsl(278, 68%, 11%);
 }
 
+input::placeholder {
+    padding-left: 0.6vw;
+}
+
+input[type="text"] {
+    padding-left: 0.6vw;
+}
 
 #cardholder_and_number {
     display: grid;
@@ -138,7 +183,7 @@ ch_name::placeholder {
 }
 
 #cardholder_and_number input {
-    width: 25vw;
+    width: 20vw;
 }
 
 #cardholder {
@@ -148,6 +193,7 @@ ch_name::placeholder {
 #exp_cvc_input {
     display: flex;
     justify-content: space-between;
+    width: 20vw;
 }
 
 input {
@@ -157,20 +203,24 @@ input {
     border-width: 0.1vw;
 }
 
-#Ch_name {}
 
 #exp_month,
 #exp_year {
-    width: 5vw;
+    width: 4vw;
+
 }
 
 #cvc {
-    width: 11.5vw;
-    margin-left: 0.5vw;
+    width: 10vw;
 }
 
+#cvc_label {
+    margin-left: 0.9vw;
+}
+
+#continue_button,
 #confirm_button {
-    width: 23vw;
+    width: 20vw;
     height: 3vw;
     margin: 10vw;
     background-color: hsl(278, 68%, 11%);
@@ -179,4 +229,22 @@ input {
     cursor: pointer;
     border-radius: 8px;
     margin-top: 5vh;
+}
+
+footer {
+    margin-top: 2vh;
+}
+
+.error_msg {
+    display: none;
+    position: absolute;
+    color: rgb(255, 57, 57);
+    font-size: x-small;
+    letter-spacing: 0.1vw;
+
+    padding: 1vh;
+}
+
+#img_ty{
+    margin-left: 17vw;
 }

@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
+    <script src="confirm.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet">
@@ -50,44 +52,65 @@
             </div>
         </div>
 
+
         <div id="main_text_container">
             <div id="cardholder_and_number">
                 <div id="cardholder" class="card_input">
                     <label for="ch_name">Cardholder Name</label><br>
                     <input type="text" id="ch_name" placeholder="e.g. Jane Appleseed">
+
+                    <p class="error_msg" id="blank_ch_name">Can't be blank</p>
                 </div>
                 <div id="card_number" class="card_input">
                     <label for="number">Card Number</label><br>
-                    <input type="number" id="number" class="number_input" placeholder="e.g. 1234 5678 9123 0000">
+                    <input type="text" id="number" class="number_input" placeholder="e.g. 1234 5678 9123 0000" maxlength="16">
+
+                    <p class="error_msg" id="format_number">Wrong format, numbers only</p>
+                    <p class="error_msg" id="blank_number">Can't be blank</p>
                 </div>
             </div>
             <div id="exp_cvc" class="card_input">
                 <label for="exp_date">Exp. Date (MM/YY)</label>
-                <label for="cvc">CVC</label>
+                <label id="cvc_label" for="cvc">CVC</label>
                 <div id="exp_cvc_input">
-                    <input type="number" id="exp_month" class="number_input" placeholder="MM">
-                    <input type="number" id="exp_year" class="number_input" placeholder="YY">
-                    <input type="number" id="cvc" class="number_input" placeholder="e.g. 123">
+                    <div id="month_container">
+                        <input type="text" id="exp_month" class="number_input" placeholder="MM" maxlength="2">
+                        <p class="error_msg" id="format_month">Wrong format, numbers only</p>
+                        <p class="error_msg" id="blank_month">Can't be blank</p>
+                    </div>
+                    <div id="year_container">
+                        <input type="text" id="exp_year" class="number_input" placeholder="YY" maxlength="2">
+                        <p class="error_msg" id="format_year">Wrong format, numbers only</p>
+                        <p class="error_msg" id="blank_year">Can't be blank</p>
+                    </div>
+                    <div id="cvc_container">
+                        <input type="text" id="cvc" class="number_input" placeholder="e.g. 123" maxlength="3">
+                        <p class="error_msg" id="format_cvc">Wrong format, numbers only</p>
+                        <p class="error_msg" id="blank_cvc">Can't be blank</p>
+                    </div>
                 </div>
             </div>
-            <button id="confirm_button">Confirm</button>
+            <button id="confirm_button">Confirm</button> 
+        </div>
+        <div id="Thank_you_page">
+                <img id="img_ty" src="images/icon-complete.svg" alt="icon-complete">
+            <div id="text_button">
+                <div id="Thank_you_text">
+                    <h1 id="thank_you">Thank You!</h1>
+                    <p id="text_details">We've added your card details</p>
+                </div>
+                <button id="continue_button">Continue</button>
+            </div>
         </div>
     </div>
 
-    <div id="Thank_you_page">
-        <img src="images/icon-complete.svg" alt="icon-complete">
-        <div id="Thank_you_text">
-            <h1>Thank You!</h1>
-            <p>We've added your card details</p>
-            <button id="continue_button">Continue</button>
-        </div>
-    </div>
     <footer>
         <div class="attribution">
             Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
             Coded by <a href="#">Equipe 1 - el</a>.
         </div>
     </footer>
+    <script src="confirm.js"></script>
 </body>
 
 </html>
